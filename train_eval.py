@@ -32,9 +32,10 @@ def train_and_evaluate(model, train_loader, test_loader, epochs=10, lr=0.01):
             # Cập nhật loss tổng
             epoch_loss += loss.item()
             batch_count += 1
-            avg_loss = epoch_loss / batch_count
-            print(f"Epoch {epoch+1}, Loss: {loss.item()}")
-            print(f"Epoch {epoch+1}/{epochs}, Average Loss: {avg_loss:.4f}")
+
+        avg_loss = epoch_loss / batch_count
+        print(f"Epoch {epoch+1}, Loss: {loss.item()}")
+        print(f"Epoch {epoch+1}/{epochs}, Average Loss: {avg_loss:.4f}")
    
     # Đánh giá mô hình
     model.eval()

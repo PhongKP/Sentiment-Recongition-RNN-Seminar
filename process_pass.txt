@@ -1,0 +1,58 @@
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Phong\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\Phong\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Version của torch: 1.13.1+cpu
+Version của nltk: 3.9.1
+Number of samples: 8144
+Number of positive samples: 2709
+Number of negative samples: 2711
+Number of neutral samples: 2724
+Vocabulary size: 2482
+Huấn luyện mô hình với pretrained=True
+Epoch 1, Loss: 1.0895144939422607
+Epoch 1/10, Average Loss: 1.0998
+Epoch 2, Loss: 1.0965697765350342
+Epoch 2/10, Average Loss: 1.1001
+Epoch 3, Loss: 1.1015533208847046
+Epoch 3/10, Average Loss: 1.0993
+Epoch 4, Loss: 1.0958114862442017
+Epoch 4/10, Average Loss: 1.1000
+Epoch 5, Loss: 1.1059293746948242
+Epoch 5/10, Average Loss: 1.0997
+Epoch 6, Loss: 1.0877501964569092
+Epoch 6/10, Average Loss: 1.0994
+Epoch 7, Loss: 1.0798171758651733
+Epoch 7/10, Average Loss: 1.0991
+Epoch 8, Loss: 1.103798270225525
+Epoch 8/10, Average Loss: 1.0998
+Epoch 9, Loss: 1.0962945222854614
+Epoch 9/10, Average Loss: 1.0994
+Epoch 10, Loss: 1.0961530208587646
+Epoch 10/10, Average Loss: 1.0997
+RNN_Pretrained=True - Accuracy: 0.32719459791282995, F1-score: 0.16435399321615787
+Huấn luyện mô hình với pretrained=False
+Epoch 1, Loss: 1.0971133708953857
+Epoch 1/10, Average Loss: 1.0988
+Epoch 2, Loss: 1.0997083187103271
+Epoch 2/10, Average Loss: 1.0990
+Epoch 3, Loss: 1.097009301185608
+Epoch 3/10, Average Loss: 1.0989
+Epoch 4, Loss: 1.0985146760940552
+Epoch 4/10, Average Loss: 1.0989
+Epoch 5, Loss: 1.095369815826416
+Epoch 5/10, Average Loss: 1.0989
+Epoch 6, Loss: 1.1013906002044678
+Epoch 6/10, Average Loss: 1.0988
+Epoch 7, Loss: 1.0993989706039429
+Epoch 7/10, Average Loss: 1.0989
+Epoch 8, Loss: 1.09978187084198
+Epoch 8/10, Average Loss: 1.0989
+Epoch 9, Loss: 1.1044831275939941
+Epoch 9/10, Average Loss: 1.0989
+Epoch 10, Loss: 1.1016461849212646
+Epoch 10/10, Average Loss: 1.0988
+RNN_Pretrained=False - Accuracy: 0.3259668508287293, F1-score: 0.1638888888888889
+Kết quả đã được lưu vào results.json

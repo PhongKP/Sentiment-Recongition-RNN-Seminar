@@ -8,6 +8,10 @@ from collections import Counter
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
+# Đảm bảo rằng bạn đã cài đặt nltk và torch
+print(f"Version của torch: {torch.__version__}")
+print(f"Version của nltk: {nltk.__version__}")
+
 # Đọc dữ liệu từ CSV
 data = pd.read_csv('sentiment_data.csv').dropna()
 texts = data['text'].tolist()

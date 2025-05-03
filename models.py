@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-import torchtext.vocab as vocab
-from data import vocab_size
+import torchtext.vocab as vocab_utils
+from data import vocab, vocab_size
 
 class RNNModel(nn.Module):
     def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim, pretrained=False):
@@ -9,10 +9,14 @@ class RNNModel(nn.Module):
         # Khởi tạo embedding layer (dùng GloVe nếu pretrained=True)
         # [Sinh viên bổ sung: dùng nn.Embedding, xử lý pretrained với GloVe]
         if pretrained:
-            # Tải GloVe embeddings
-            glove = vocab.GloVe(name='6B', dim=embedding_dim)
-            # Khởi tạo embedding layer với GloVe weights
-            self.embedding = nn.Embedding.from_pretrained(glove.vectors, freeze=False, padding_idx=0)
+            glove = vocab_utils.GloVe(name='6B', dim=embedding_dim)
+            embeddings = torch.zeros(vocab_size, embedding_dim)
+            for word, idx in vocab.items():
+                if word in glove.stoi:
+                    embeddings[idx] = glove.vectors[glove.stoi[word]]
+                else:
+                    embeddings[idx] = glove.vectors[glove.stoi['unk']]
+            self.embedding = nn.Embedding.from_pretrained(embeddings, freeze=False, padding_idx=0)
         else:
             # Nếu không dùng pretrained, khởi tạo embedding layer thông thường
             self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
